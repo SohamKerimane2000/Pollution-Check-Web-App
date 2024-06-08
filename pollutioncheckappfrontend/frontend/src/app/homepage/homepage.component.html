@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>PollutionCheckApp</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+<!--Styling_part-->
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+
+body, html {
+  height: 100%;
+  line-height: 1.8;
+  color: black;
+}
+
+.bgimg-1 {
+  background-position: center;
+  background-size: cover;
+  background-image: url('images/pollution.jpg');
+  min-height: 100%;
+  
+}
+
+.w3-bar .w3-button {
+  padding: 16px;
+}
+#home{
+  background-image: url('https://images.unsplash.com/photo-1582980752625-10783b273e2d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80');
+}
+</style>
+</head>
+<body>
+<!--Home page section-->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-card" id="myNavbar">
+    <a href="#home" class="w3-bar-item w3-button w3-wide">POLLUTION CHECK APP</a>
+
+    <!--Navigation section-->
+    <div class="w3-right w3-hide-small">
+      <a  routerLink="/login" class="w3-bar-item w3-button"><i class="fa fa-sign-in"></i>&nbsp;lOGIN</a>
+      <a  class="w3-bar-item w3-button" routerLink="/register"><i class="fa fa-sign-in"></i>&nbsp; REGISTER</a>
+      <a  class="w3-bar-item w3-button" routerLink="/login"><i class="fa fa-heart"></i>&nbsp; WISH LIST</a>
+      
+    </div>
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+
+<header class="bgimg-1 w3-display-container w3-grayscale-min" id="home" >
+  <div class="w3-display-left w3-text-white" style="padding:48px; background-image: url('/images/pollution.jpg');" >
+    <span class="w3-jumbo w3-hide-small">Air Pollution</span><br>
+    <span class="w3-xxlarge w3-hide-large w3-hide-medium">Start something that matters</span><br>
+    <span class="w3-large" style="color:black;">To prevent pollution from these sources, the MPCA provides education, guidance, and incentives for reducing air pollution. Some of the communities have their programs for businesses, cities, nonprofits, and communities that address a range of environmental problems, including air quality..</span>
+    <p><a href="#about" routerLink="/login" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Lets See The Pollution</a></p>
+  </div> 
+ 
+
+</header>
+
+<!-- Pollution Section -->
+<div class="w3-container w3-light-grey w3-padding-64">
+  <div class="w3-row-padding">
+    <div class="w3-col m6">
+      <h2><b> Largest Pollution Suffering in this Countries</b></h2>
+      <p>The three countries with the highest carbon dioxide (CO2) emissions are, unsurprisingly, the three most industrialised countries in the world: China, the United States, and India. However, their carbon footprint per capita tells a very different story..</p>
+    </div>
+    <div class="w3-col m6">
+      <p class="w3-wide">China </p>
+      <div class="w3-grey">
+        <div class="w3-container w3-dark-grey w3-center" style="width:30%">30%</div>
+      </div>
+      <p class="w3-wide">United States</p>
+      <div class="w3-grey">
+        <div class="w3-container w3-dark-grey w3-center" style="width:15%">15%</div>
+      </div>
+      <p class="w3-wide">India</p>
+      <div class="w3-grey">
+        <div class="w3-container w3-dark-grey w3-center" style="width:7%">7%</div>
+      </div>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,93 @@
+
+  <!DOCTYPE html>
+  <html>
+  <head>
+    <!--Frontend section of the login page-->
+  <title>PollutionCheckApp</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+  /*CSS Part*/
+  body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+  
+  body, html {
+    height: 100%;
+    line-height: 1.8;
+  }
+  
+  .bgimg-1 {
+    background-position: center;
+    background-size: cover;
+    background-image: url('images/pollution.jpg');
+    min-height: 100%;
+  }
+  
+  .w3-bar .w3-button {
+    padding: 16px;
+  }
+  #home{
+    background-image: url('./images/pollution.jpg');
+  }
+  </style>
+  </head>
+  <body>
+  <!--Navigation bar-->
+  <div class="w3-top" >
+    <div class="w3-bar w3-white w3-card" id="myNavbar">
+      <a href="" class="w3-bar-item w3-button w3-wide">POLLUTION CHECK APP</a>
+  
+      <div class="w3-right w3-hide-small">
+        <a  class="w3-bar-item w3-button" routerLink="/register"><i class="fa fa-sign-in"></i>&nbsp; REGISTER</a>
+        
+        
+      </div>
+  
+      <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+  </div>
+  
+  
+<!--Login Form-->
+<section class="vh-100 gradient-custom" style="margin-top: 50px;">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+        <div class="card bg-dark text-white" style="border-radius: 1rem;    background-image: radial-gradient(circle, #175ca6, #0078ba, #0092c5, #00acca, #18c4cb);
+        ">
+          <div class="card-body p-5 text-center">
+          <form [formGroup]="formGroup" (ngSubmit)="islogin()">
+            <div class="mb-md-5 mt-md-4 pb-5">
+
+              <h2 class="fw-bold mb-2 text-uppercase">Login</h2>
+              <p class="text-white-50 mb-5">Please enter your login and password!</p>
+               
+              <div class="form-outline form-white mb-4">
+                <input type="text" id="typeEmailX"  class="form-control form-control-lg" placeholder="Enter username" formControlName="username" required="false">
+                <label class="form-label" for="typeEmailX">Username</label>
+              </div>
+
+              <div class="form-outline form-white mb-4">
+                <input type="password" id="typePasswordX"required class="form-control form-control-lg" placeholder="Enter password" formControlName="password" required="false"/>
+                <label class="form-label" for="typePasswordX">Password</label>
+              </div>
+
+              <button class="btn btn-outline-light btn-lg px-5" type="submit">Login</button>
+            
+            </div>
+          </form>
+            <div>
+              <p class="mb-0">Don't have an account? <button (click)="register()" class="btn btn-outline-light btn-lg px-5">Sign Up</button>
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

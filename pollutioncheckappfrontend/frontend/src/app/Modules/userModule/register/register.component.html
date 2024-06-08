@@ -1,0 +1,145 @@
+
+  <!DOCTYPE html>
+  <html>
+  <head>
+    <!--Frontend part of register page-->
+  <title>PollutionCheckApp</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!--css part for register page-->
+  <style>
+  body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+  
+  body, html {
+    height: 100%;
+    line-height: 1.8;
+    background-image: url('https://images.unsplash.com/photo-1582980752625-10783b273e2d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80');
+
+  }
+  
+  .bgimg-1 {
+    background-position: center;
+    background-size: cover;
+    background-image: url('images/pollution.jpg');
+    min-height: 100%;
+  }
+  
+  .w3-bar .w3-button {
+    padding: 16px;
+  }
+  #home{
+    background-image: url('./images/pollution.jpg');
+  }
+  </style>
+  </head>
+  <body>
+  <!--Navigation part-->
+  <div class="w3-top">
+    <div class="w3-bar w3-white w3-card" id="myNavbar">
+      <a href="" class="w3-bar-item w3-button w3-wide">POLLUTION CHECK APP</a>
+  
+      <div class="w3-right w3-hide-small">
+        <a  class="w3-bar-item w3-button" routerLink="/login"><i class="fa fa-sign-in"></i>&nbsp; LOGIN</a>
+        
+        
+      </div>
+  
+      <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+  </div>
+  
+<!--Registration form-->
+<section class="vh-100 bg-image"
+  style="background-image: url('https://mdbcdn.b-cdn.net/img/Photos/new-templates/search-box/img4.webp'); margin-top: 40px;">
+  <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+    <div class="container h-100" >
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+          <div class="card m-5" style="border-radius: 15px;     background-image: radial-gradient(circle, #175ca6, #0078ba, #0092c5, #00acca, #18c4cb);">
+            <div class="card-body p-5">
+              <h2 class="text-uppercase text-center mb-5" style="color: white;"><b> Create an account</b></h2>
+
+              <form [formGroup]="myform" (ngSubmit)="register()">
+
+                <h5 class="fw-normal pb-3" style="letter-spacing: 1px;color: white;">Enter your details and register
+                </h5>
+
+                <div class="form-outline mb-1">
+                  <label class="form-label" for="username" style="color: white;">User Name</label>
+                  <input type="text" minlength="6" id="username" placeholder="Enter user name"
+                    class="form-control form-control-lg" formControlName="username" />
+
+
+                </div>
+
+                <div class="form-outline mb-1">
+                  <label class="form-label" for="email" style="color:white ;">Email</label>
+                  <input type="email" id="email" placeholder="Enter email"
+                    class="form-control form-control-lg" formControlName="email"  ngModel email/>
+                  
+                </div>
+                                  
+                <div class="form-outline mb-1">
+                  <label class="form-label" for="password" style="color:white ;">Password</label>
+                  <input type="password" id="password" name="password" minlength="6" placeholder="Enter password"
+                    class="form-control form-control-lg" formControlName="password" />
+                </div>
+
+                <div class="form-outline mb-1">
+                  <label class="form-label" for="firstName" style="color:white ;">First Name</label>
+                  <input type="text" id="firstName" minlength="6"  placeholder="Enter first name"
+                    class="form-control form-control-lg" formControlName="firstName" />
+                </div>
+
+                <div class="form-outline mb-1">
+                  <label class="form-label" for="lastName" style="color:white ;">Last Name</label>
+                  <input type="text" id="lastName" placeholder="Enter last name"
+                    class="form-control form-control-lg" formControlName="lastName" />
+                </div>
+
+                <div class="form-outline mb-1">
+                  <label class="form-label" for="phnNumber" style="color:white ;">Phone Number</label>
+                  <input type="text" id="phnNumber" placeholder="Enter phone number"
+                    class="form-control form-control-lg" formControlName="phnNumber" />
+                </div>
+
+                <div class="form-outline mb-1">
+                  <label class="form-label" for="city" style="color:white ;">City Name</label>
+                  <input type="text" id="city" placeholder="Enter city name"
+                    class="form-control form-control-lg" formControlName="city" />
+                </div>
+
+                <div class="form-outline mb-1">
+                  <label class="form-label" for="state" style="color:white ;">State Name</label>
+                  <input type="text" id="state" placeholder="Enter State name"
+                    class="form-control form-control-lg" formControlName="state" />
+                </div>
+
+                <div class="form-outline mb-1">
+                  <label class="form-label" for="country" style="color:white ;">Country Name</label>
+                  <input type="text" id="country" placeholder="Enter country name"
+                    class="form-control form-control-lg" formControlName="country" />
+                </div>
+
+                <div class="pt-1 mb-4">
+                  <button class="btn btn-dark btn-lg btn-block" type="submit">Sign up</button>
+                </div>
+
+
+                <p class="pt-lg-2" style="color: #393f81;">Already have an account? <a routerLink="/login"
+                    style="color: #393f81;">Sign in here</a></p>
+
+              </form>
+               
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

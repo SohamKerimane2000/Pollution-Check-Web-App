@@ -1,0 +1,41 @@
+#appContainer{
+    height: 100%;
+    width: 100%;
+    background-image: radial-gradient(circle, #175ca6, #0078ba, #0092c5, #00acca, #18c4cb);
+  }
+  body,html{
+    background-image: radial-gradient(circle, #175ca6, #0078ba, #0092c5, #00acca, #18c4cb);
+
+  }
+  #cardStyle{
+  
+    background-color: rgb(255, 255, 255,0.4);
+    box-shadow: 5px,3px,10px,5px grey;
+  }input{
+    border:none;
+    background-color: rgba(255,255,255,0);
+    border-bottom:solid black;
+    size:3px;
+    margin-left: 10px;
+    width: 85%;
+}
+
+label{
+    color: grey;
+}
+.form-group{
+    margin-top:30px;
+}
+form{
+    padding:12px;
+}
+
+#submitButton{
+    margin: 25px;
+    width: 40%;
+}
+#loginp{
+    text-align: center;
+    font-size: 30px;
+
+}
